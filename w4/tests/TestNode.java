@@ -16,8 +16,10 @@ public class TestNode {
         Node test2 = new Node (20, null);
         Integer res2 = (Integer) NodeUtils.addToTail(test2, head).getValue();
         System.out.println(res2 == 5);
-    }
 
+        System.out.println(NodeUtils.toString(head));
+
+        }
 
 
 }

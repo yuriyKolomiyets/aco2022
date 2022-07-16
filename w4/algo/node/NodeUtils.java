@@ -19,6 +19,12 @@ public class NodeUtils {
         }
     }
 
+    public static String toString(Node chain){
+        return chain != null ? chain.value + "->" + toString(chain.next) : "";
+    }
+
+
+
     public Node getHead() {
         return head;
     }
