@@ -28,4 +28,13 @@ public class ArrayUtils {
 
         return -1;
     }
+
+    public static int[] genRanMas(int size, int range) {
+
+        int [] mas = new int[size];
+        for (int s = 0; s < size; s++) {
+            mas[s] = (int)(Math.random()*range);
+        }
+        return mas;
+    }
 }

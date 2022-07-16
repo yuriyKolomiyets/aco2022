@@ -1,10 +1,11 @@
 package aco.w1.model;
 
-public class Group {
+import java.util.ArrayList;
+
+public class Group{
     private static int groupIdCount = 0;
     private int groupId;
-    private int freePlace = 0;
-    private Student [] students = new Student[24];
+    private ArrayList <Student> students = new ArrayList<>();
 
     {
         groupIdCount++;
@@ -15,28 +16,54 @@ public class Group {
 
     }
 
-    public Group(Student[] students) {
-        this.students = students;
-    }
 
     public void addStudent(Student student){
-        students[freePlace] = student;
-        freePlace++;
+        students.add(student);
     }
 
-    public static int getGroupIdCount() {
-        return groupIdCount;
+    public void insertStudent(Student student, int indexPosition){
+        students.add(indexPosition, student);
     }
 
-    public int getFreePlace() {
-        return freePlace;
+    public ArrayList<Student> filterByName(String name){
+        ArrayList <Student> studentsFiltered = new ArrayList<>();
+
+        for (Student searchSt : students) {
+            if (searchSt.getName().equals(name)) {
+                studentsFiltered.add(searchSt);
+            }
+        }
+        return studentsFiltered;
     }
 
-    public void printInfo() {
-        for (int i = 0; i < freePlace; i++) {
 
-            System.out.println("group Id " + groupId + "stud id " + students[i].getId() +  students[i].getAge() + students[i].getName() );
 
+
+    public Student removeLastStudent(){
+        return students.remove(students.size()-1);
+    }
+
+    @Override
+    public String toString() {
+        return "Group{" +
+                "groupId=" + groupId +
+                ", students=" + students +
+                '}';
+    }
+
+    public int size() {
+        return students.size();
+    }
+
+    public void work() {
+        for (int i = 0; i <students.size() ; i++) {
+            students.get(i).work();
         }
     }
+
+    public void sort() {
+        students.sort(new StudentComparator());
+    }
+
+
 }

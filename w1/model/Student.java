@@ -1,15 +1,11 @@
 package aco.w1.model;
 
-public class Student {
+public class Student extends Human implements IBio, Comparable<Student> {
 
     private static int idCount;
     private static double money;
 
     private int id;
-    private String name;
-    private int age;
-
-    private Contacts contacts;
 
     {
         idCount++;
@@ -19,31 +15,29 @@ public class Student {
     public Student() {
     }
 
-    public Student(String name, int age, Contacts contacts) {
-
-        this.name = name;
-        this.age = age;
-        this.contacts = contacts;
+    public Student(String name, int age, Contacts contacts, int money) {
+        super(name,age, contacts);
+        this.money = money;
     }
 
     public String getName() {
-        return name;
+        return super.getName();
     }
     public void setName(String name) {
-        this.name = name;
+        super.setName(name);
     }
 
     public int getAge() {
-        return age;
+        return super.getAge();
     }
 
     public void setAge(int age) {
-        this.age = age;
+        super.setAge(age);
     }
 
 
     public void printInfo(){
-        System.out.println(name + age + "id" + id + contacts.printInfo());
+        System.out.println(super.getAge() + super.getName() + "id" + id + super.getContacts().printInfo());
     }
 
     public static double getMoney() {
@@ -52,5 +46,23 @@ public class Student {
 
     public int getId() {
         return id;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                "name=" + super.getName() +
+                '}';
+    }
+
+    @Override
+    public void work() {
+        System.out.println("student # " + id + "is working" );
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return this.getName().compareTo(o.getName());
     }
 }
