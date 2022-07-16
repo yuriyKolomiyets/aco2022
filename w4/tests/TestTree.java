@@ -1,5 +1,6 @@
 package aco.w4.tests;
 
+import aco.w4.algo.node.NodeUtils;
 import aco.w4.algo.tree.ITreeController;
 import aco.w4.algo.tree.Link;
 import aco.w4.algo.tree.TreeController;
