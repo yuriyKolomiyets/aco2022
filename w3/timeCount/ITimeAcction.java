@@ -1,4 +1,4 @@
-package aco.w3.TimeCount;
+package aco.w3.timeCount;
 
 public interface ITimeAcction {
 

@@ -17,7 +17,12 @@ public class TestNode {
         Integer res2 = (Integer) NodeUtils.addToTail(test2, head).getValue();
         System.out.println(res2 == 5);
 
+
+
         System.out.println(NodeUtils.toString(head));
+
+        System.out.println("===");
+
 
         }
 
