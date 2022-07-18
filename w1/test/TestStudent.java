@@ -5,6 +5,7 @@ import aco.w1.model.Group;
 import aco.w1.model.Student;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class TestStudent {
 
@@ -43,7 +44,7 @@ public class TestStudent {
 
         group1.work();
 
-        ArrayList<Student> filtered = group1.filterByName("Oleg");
+        List<Student> filtered = group1.filterByName("Oleg");
         System.out.println(filtered + "new test");
 
 
