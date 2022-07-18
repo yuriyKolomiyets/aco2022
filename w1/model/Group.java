@@ -1,6 +1,8 @@
 package aco.w1.model;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Group{
     private static int groupIdCount = 0;
@@ -26,18 +28,11 @@ public class Group{
     }
 
     public ArrayList<Student> filterByName(String name){
-        ArrayList <Student> studentsFiltered = new ArrayList<>();
 
-        for (Student searchSt : students) {
-            if (searchSt.getName().equals(name)) {
-                studentsFiltered.add(searchSt);
-            }
-        }
-        return studentsFiltered;
+        Stream <Student> stream = students.stream();
+        return (ArrayList<Student>) stream.filter((student -> student.getName().contains(name)))
+                .collect(Collectors.toList());
     }
-
-
-
 
     public Student removeLastStudent(){
         return students.remove(students.size()-1);

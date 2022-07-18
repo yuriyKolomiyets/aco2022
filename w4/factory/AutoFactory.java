@@ -8,7 +8,6 @@ import aco.w4.strategy.GassFill;
 public class AutoFactory {
 
     public static IAutoProxy create () {
-        IAutoProxy auto = new AutoProxy(new Auto (new GassFill()));
-        return auto;
+        return new AutoProxy(new Auto(new GassFill()));
     }
 }

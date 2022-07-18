@@ -44,7 +44,7 @@ public class TestStudent {
         group1.work();
 
         ArrayList<Student> filtered = group1.filterByName("Oleg");
-        System.out.println(filtered);
+        System.out.println(filtered + "new test");
 
 
         Group group2 = new Group();
