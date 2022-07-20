@@ -1,5 +1,6 @@
 package aco.w5.iterator.data_str;
 
+import javax.naming.SizeLimitExceededException;
 import java.util.Iterator;
 import java.util.Spliterator;
 import java.util.function.Consumer;
@@ -12,9 +13,9 @@ public class ArrayQueue <T> implements IQueue <T>{
     private int size;
 
     @Override
-    public void enqueue(T t) {
+    public void enqueue(T t) throws SizeLimitExceededException {
         if(size > mas.length) {
-            System.out.println("exception");
+            throw new SizeLimitExceededException("no free space");
         }
         if(size == 0){
             mas [tail] = t;
@@ -26,7 +27,7 @@ public class ArrayQueue <T> implements IQueue <T>{
     public T dequeue() {
 
         if(size == 0) {
-            System.out.println("exception");
+            throw new NegativeArraySizeException("ArrayQueue is empty");
         }
         T ret = mas[tail];
         head++;

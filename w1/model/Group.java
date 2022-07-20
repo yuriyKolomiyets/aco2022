@@ -20,19 +20,29 @@ public class Group{
     }
 
 
-    public void addStudent(Student student){
+    public void addStudent(Student student) throws Exception {
+        if (student == null) {
+            throw new Exception ("student is empty");
+        }
         students.add(student);
     }
 
-    public void insertStudent(Student student, int indexPosition){
+    public void insertStudent(Student student, int indexPosition) throws Exception {
+        if (student == null) {
+            throw new Exception ("student is empty");
+        }
+
         students.add(indexPosition, student);
     }
 
-    public List<Student> filterByName(String name){
-        return students.stream().filter(student -> student.getName().equals(name)).collect(Collectors.toList());
+    public List<Student> filterByName(String name) throws Exception {
+        if (name == null) {
+            throw new Exception ("no name mentioned");
+        } return students.stream().filter(student -> student.getName().equals(name)).collect(Collectors.toList());
     }
 
     public Student removeLastStudent(){
+
         return students.remove(students.size()-1);
     }
 

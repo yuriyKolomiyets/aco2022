@@ -9,7 +9,7 @@ import java.util.List;
 
 public class TestStudent {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
 
         Group group1 = new Group();

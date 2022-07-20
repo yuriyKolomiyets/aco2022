@@ -12,7 +12,11 @@ public class TestDataStr {
         Iterator <Integer> myIter = queue.iterator();
         while (myIter.hasNext()){
             Integer res = myIter.next();
-            System.out.println(res);
+            System.out.println(res + "!!");
+        }
+
+        for (Integer curr:queue) {
+            System.out.println(curr);
         }
     }
 }
