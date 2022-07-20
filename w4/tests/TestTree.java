@@ -6,7 +6,7 @@ import aco.w4.algo.tree.TreeController;
 
 public class TestTree {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Link emp1 = new Link(1, "emp1");
         Link emp2 = new Link(1, "emp2");
         Link emp3 = new Link(1, "emp3");
