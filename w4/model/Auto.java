@@ -6,7 +6,7 @@ import aco.w4.fasade.Musicc;
 import aco.w4.proxy.IAutoProxy;
 import aco.w4.strategy.DefaultFillStrategy;
 import aco.w4.strategy.IFillStrategy;
-import aco.w6.exceptions.InvalidCredentialsExceptions;
+import aco.w6.exceptions.InvalidCredentialsException;
 
 public class Auto implements IAutoProxy {
 
@@ -37,7 +37,7 @@ public class Auto implements IAutoProxy {
     public void run(AutoKey autoKey) throws Exception {
 
         if (!startKey.equals(autoKey.getStartKey())){
-            throw new InvalidCredentialsExceptions("Your key is not valid");
+            throw new InvalidCredentialsException("Your key is not valid");
         }
         autoLights.lightsOn();
         engine.starEngine();

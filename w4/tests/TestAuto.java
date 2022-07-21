@@ -7,7 +7,7 @@ import aco.w4.model.Auto;
 import aco.w4.strategy.ElectroFill;
 import aco.w4.strategy.GassFill;
 import aco.w4.model.Tesla;
-import aco.w6.exceptions.InvalidCredentialsExceptions;
+import aco.w6.exceptions.InvalidCredentialsException;
 
 public class TestAuto {
 
@@ -35,7 +35,7 @@ public class TestAuto {
         autoKey.setStartKey("id 1");
        try {
            tesla12.run(autoKey);
-       } catch (InvalidCredentialsExceptions exceptions){
+       } catch (InvalidCredentialsException exceptions){
            tesla12.stop();
            System.out.println("key invalid");
        }

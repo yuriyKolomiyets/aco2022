@@ -1,7 +1,6 @@
 package aco.w4.proxy;
 
 import aco.w4.model.AutoKey;
-import aco.w6.exceptions.InvalidCredentialsExceptions;
 
 public class AutoProxy implements IAutoProxy {
     private IAutoProxy target;
