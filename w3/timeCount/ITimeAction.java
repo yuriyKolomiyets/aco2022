@@ -1,6 +1,6 @@
 package aco.w3.timeCount;
 
-public interface ITimeAcction {
+public interface ITimeAction {
 
    void callAction();
 }

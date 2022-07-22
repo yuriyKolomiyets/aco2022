@@ -27,7 +27,7 @@ public class IOUtils {
     public static byte[] getBytesWithBuff(String path) throws FileNotFoundException {
         InputStream is = new FileInputStream(path);
 
-        byte[] buff = new byte[1000];
+        byte[] buff = new byte[50];
 
         ByteArrayOutputStream byteArrayOutputStream =
                 new ByteArrayOutputStream();
@@ -35,7 +35,6 @@ public class IOUtils {
         int count = -1;
         try {
             while ((count = is.read(buff)) != -1) {
-                // todo find problem, see string result before returning
                 byteArrayOutputStream.write(buff, 0, count);
             }
             byteArrayOutputStream.close();

@@ -2,10 +2,20 @@ package aco.w3.timeCount;
 
 public class TimeCounter {
 
-    public static String countActionTime(ITimeAcction action){
-        long start = System.nanoTime();
-        action.callAction();
-        long fin = System.nanoTime();
-        return "nanos " + (fin - start);
+    private ITimeAction timeAction;
+
+    public TimeCounter(ITimeAction timeAction) {
+        this.timeAction = timeAction;
+    }
+
+    public void setTimeAction(ITimeAction timeAction) {
+        this.timeAction = timeAction;
+    }
+
+    public String countActionTime(){
+        long start = System.currentTimeMillis();
+        timeAction.callAction();
+        long end = System.currentTimeMillis();
+        return "millis " + (end - start);
     }
 }
