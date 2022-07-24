@@ -18,7 +18,7 @@ public class TestIoUtils {
             }
         });
         String time = counter.countActionTime();
-        System.out.println(time);
+        System.out.println(time + "getBytesWithBuff");
 
         TimeCounter counter1 = new TimeCounter(() -> {
             try {
@@ -28,14 +28,26 @@ public class TestIoUtils {
             }
         });
         String time1 = counter.countActionTime();
-        System.out.println(time1);
+        System.out.println(time1 + "getBytes");
+
+
+        TimeCounter counter2 = new TimeCounter(() -> {
+            try {
+                String res = IOUtils.readFileContent(FILE_SOURCE);
+                System.out.println(res + "***");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        });
+        String time2 = counter.countActionTime();
+        System.out.println(time2 + "readFileContent");
 
         try {
             byte[] copy = IOUtils.getBytesWithBuff(FILE_SOURCE);
             IOUtils.writeInto(copy,FILE_DESTINATION);
 
             File file = new File(FILE_DESTINATION);
-            System.out.println(file.exists());
+            System.out.println(file.exists() + "writeInto");
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
