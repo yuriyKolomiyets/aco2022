@@ -150,9 +150,7 @@ public class IOUtils {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(path))) {
             Object ret = ois.readObject();
             return (T) ret;
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
 

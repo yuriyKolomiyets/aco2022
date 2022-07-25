@@ -1,6 +1,8 @@
 package aco.w1.model;
 
-public class Contacts {
+import java.io.Serializable;
+
+public class Contacts implements Serializable {
 
     private String phone;
     private String street;
@@ -41,5 +43,14 @@ public class Contacts {
 
     public String printInfo() {
         return street + appartment + phone;
+    }
+
+    @Override
+    public String toString() {
+        return "Contacts{" +
+                "phone='" + phone + '\'' +
+                ", street='" + street + '\'' +
+                ", appartment=" + appartment +
+                '}';
     }
 }

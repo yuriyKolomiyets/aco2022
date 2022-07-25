@@ -1,5 +1,7 @@
 package aco.w1.model;
 
+import aco.w6.io.IOUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -66,6 +68,12 @@ public class Group{
 
     public void sort() {
         students.sort(new StudentComparator());
+    }
+
+    public void saveToFile(String path) {
+        for (Student student:students) {
+            IOUtils.save(student, path);
+        }
     }
 
 

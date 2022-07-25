@@ -1,8 +1,9 @@
 package aco.w1.model;
 
+import java.io.Serializable;
 import java.util.function.BinaryOperator;
 
-public class Human  {
+public class Human  implements Serializable {
     private String name;
     private int age;
 

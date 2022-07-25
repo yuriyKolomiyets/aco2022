@@ -4,6 +4,7 @@ import aco.w1.model.Contacts;
 import aco.w1.model.Group;
 import aco.w1.model.Student;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -66,6 +67,9 @@ public class TestStudent {
         System.out.println(group2);
 
         group2.sort();
+
+        String path = "/Users/o.kolomiyets/IdeaProjects/aco2022/src/group.txt";
+        group2.saveToFile(path);
 
         System.out.println(group2);
 

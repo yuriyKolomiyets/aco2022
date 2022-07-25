@@ -1,6 +1,8 @@
 package aco.w1.model;
 
-public class Student extends Human implements IBio, Comparable<Student> {
+import java.io.Serializable;
+
+public class Student extends Human implements Serializable, IBio, Comparable<Student> {
 
     private static int idCount;
     private static double money;
@@ -52,7 +54,7 @@ public class Student extends Human implements IBio, Comparable<Student> {
     public String toString() {
         return "Student{" +
                 "id=" + id +
-                "name=" + super.getName() +
+                "name=" + super.getName() + ", money=" + money + ", " + super.getContacts() +
                 '}';
     }
 
