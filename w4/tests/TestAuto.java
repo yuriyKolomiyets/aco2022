@@ -1,11 +1,11 @@
 package aco.w4.tests;
 
-import aco.w4.factory.AutoFactory;
+import aco.patterns.factory.AutoFactory;
 import aco.w4.model.AutoKey;
-import aco.w4.proxy.IAutoProxy;
+import aco.patterns.proxy.IAutoProxy;
 import aco.w4.model.Auto;
-import aco.w4.strategy.ElectroFill;
-import aco.w4.strategy.GassFill;
+import aco.patterns.strategy.ElectroFill;
+import aco.patterns.strategy.GassFill;
 import aco.w4.model.Tesla;
 import aco.w6.exceptions.InvalidCredentialsException;
 

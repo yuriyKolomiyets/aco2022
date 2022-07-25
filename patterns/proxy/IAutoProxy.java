@@ -1,4 +1,4 @@
-package aco.w4.proxy;
+package aco.patterns.proxy;
 
 import aco.w4.model.AutoKey;
 

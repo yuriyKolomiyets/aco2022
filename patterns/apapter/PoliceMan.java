@@ -1,4 +1,4 @@
-package aco.w6.apapter;
+package aco.patterns.apapter;
 
 public class PoliceMan {
     public void doGoodJob() {

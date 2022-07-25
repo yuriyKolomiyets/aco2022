@@ -1,11 +1,11 @@
 package aco.w4.model;
 
-import aco.w4.fasade.AutoLights;
-import aco.w4.fasade.Engine;
-import aco.w4.fasade.Musicc;
-import aco.w4.proxy.IAutoProxy;
-import aco.w4.strategy.DefaultFillStrategy;
-import aco.w4.strategy.IFillStrategy;
+import aco.patterns.fasade.AutoLights;
+import aco.patterns.fasade.Engine;
+import aco.patterns.fasade.Musicc;
+import aco.patterns.proxy.IAutoProxy;
+import aco.patterns.strategy.DefaultFillStrategy;
+import aco.patterns.strategy.IFillStrategy;
 import aco.w6.exceptions.InvalidCredentialsException;
 
 public class Auto implements IAutoProxy {

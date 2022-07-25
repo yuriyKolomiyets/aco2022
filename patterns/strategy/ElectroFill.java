@@ -1,4 +1,4 @@
-package aco.w4.strategy;
+package aco.patterns.strategy;
 
 public class ElectroFill implements IFillStrategy{
     @Override

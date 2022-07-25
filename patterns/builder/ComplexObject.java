@@ -1,4 +1,4 @@
-package aco.w6.builder;
+package aco.patterns.builder;
 
 import java.util.List;
 

@@ -1,9 +1,9 @@
-package aco.w4.factory;
+package aco.patterns.factory;
 
-import aco.w4.proxy.IAutoProxy;
-import aco.w4.proxy.AutoProxy;
+import aco.patterns.proxy.IAutoProxy;
+import aco.patterns.proxy.AutoProxy;
 import aco.w4.model.Auto;
-import aco.w4.strategy.GassFill;
+import aco.patterns.strategy.GassFill;
 
 public class AutoFactory {
 

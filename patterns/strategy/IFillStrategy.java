@@ -1,4 +1,4 @@
-package aco.w4.strategy;
+package aco.patterns.strategy;
 
 public interface IFillStrategy {
     void fill();
