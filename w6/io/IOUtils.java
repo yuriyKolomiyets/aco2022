@@ -110,7 +110,7 @@ public class IOUtils {
     public static void writeIntoFile2(List<String> content, String path) {
 
 
-        // tru with resources since java 1,7
+        // try with resources since java 1,7
         try (Writer writer = new FileWriter(path)) {
 
             for (String part : content) {
