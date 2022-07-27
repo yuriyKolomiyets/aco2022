@@ -1,6 +1,7 @@
 package aco.w1.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 import java.util.function.BinaryOperator;
 
 public class Human  implements Serializable {
@@ -49,5 +50,18 @@ public class Human  implements Serializable {
                 ", age=" + age +
                 ", contacts=" + contacts +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Human human = (Human) o;
+        return age == human.age && Objects.equals(name, human.name) && Objects.equals(contacts, human.contacts);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age, contacts);
     }
 }
