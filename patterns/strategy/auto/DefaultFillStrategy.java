@@ -1,4 +1,4 @@
-package aco.patterns.strategy;
+package aco.patterns.strategy.auto;
 
 public class DefaultFillStrategy implements IFillStrategy {
     @Override

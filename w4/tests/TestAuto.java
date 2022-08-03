@@ -4,8 +4,8 @@ import aco.patterns.factory.AutoFactory;
 import aco.w4.model.AutoKey;
 import aco.patterns.proxy.IAutoProxy;
 import aco.w4.model.Auto;
-import aco.patterns.strategy.ElectroFill;
-import aco.patterns.strategy.GassFill;
+import aco.patterns.strategy.auto.ElectroFill;
+import aco.patterns.strategy.auto.GassFill;
 import aco.w4.model.Tesla;
 import aco.w6.exceptions.InvalidCredentialsException;
 

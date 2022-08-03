@@ -4,8 +4,8 @@ import aco.patterns.fasade.AutoLights;
 import aco.patterns.fasade.Engine;
 import aco.patterns.fasade.Musicc;
 import aco.patterns.proxy.IAutoProxy;
-import aco.patterns.strategy.DefaultFillStrategy;
-import aco.patterns.strategy.IFillStrategy;
+import aco.patterns.strategy.auto.DefaultFillStrategy;
+import aco.patterns.strategy.auto.IFillStrategy;
 import aco.w6.exceptions.InvalidCredentialsException;
 
 public class Auto implements IAutoProxy {

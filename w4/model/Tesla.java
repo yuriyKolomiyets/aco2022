@@ -1,6 +1,6 @@
 package aco.w4.model;
 
-import aco.patterns.strategy.IFillStrategy;
+import aco.patterns.strategy.auto.IFillStrategy;
 
 public class Tesla extends Auto{
 
