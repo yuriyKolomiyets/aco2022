@@ -3,6 +3,7 @@ package aco.patterns.strategy.ducks.test;
 import aco.patterns.strategy.ducks.behaviours.FlyWithWings;
 import aco.patterns.strategy.ducks.behaviours.Squeak;
 import aco.patterns.strategy.ducks.model.Duck;
+import aco.patterns.strategy.ducks.model.DuckCall;
 import aco.patterns.strategy.ducks.model.MallardDuck;
 import aco.patterns.strategy.ducks.model.RubberDuck;
 
@@ -19,5 +20,8 @@ public class TestDucks {
         duck2.setQuackBehaviour(new Squeak());
         duck2.fly();
         duck2.quack();
+
+        DuckCall duckCall = new DuckCall();
+        duckCall.quack();
     }
 }
