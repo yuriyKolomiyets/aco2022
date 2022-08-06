@@ -3,7 +3,7 @@ package aco.patterns.decorator.beverages;
 public class Espresso extends Beverage {
 
     public Espresso() {
-        description = "Espresso";
+        this.description = "Espresso";
     }
 
     @Override
