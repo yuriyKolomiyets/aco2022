@@ -1,6 +1,4 @@
-package aco.patterns.command.bookexample;
-
-import java.util.Optional;
+package aco.patterns.command;
 
 public class RemoteControl {
     Command[] onCommands;

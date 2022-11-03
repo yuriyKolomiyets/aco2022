@@ -1,4 +1,4 @@
-package aco.patterns.command.bookexample;
+package aco.patterns.command;
 
 public class Test {
 
