@@ -1,0 +1,30 @@
+package aco.groupingby;
+
+import java.util.IntSummaryStatistics;
+
+public class BlogPost {
+
+   private String title;
+   private String author;
+   private BlogPostType type;
+   private int likes;
+   record AuthPostTypesLikes(String author, BlogPostType type, int likes) {};
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public BlogPostType getType() {
+        return type;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    record PostCountTitlesLikesStats(long postCount, String titles, IntSummaryStatistics likesStats){};
+}
